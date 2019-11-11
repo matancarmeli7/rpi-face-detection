@@ -1,0 +1,14 @@
+---
+#- hosts: localhost
+  #gather_facts: false
+  #tasks:
+  #- name: copy kubeconfig
+    #shell: sshpass -p "Aa123456" scp -r "{{groups['kubemaster'] | first}}":/root/.kube/ /$HOME/
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: template the kubernetes creation yml
+    template:
+      src: "/var/lib/jenkins/workspace/{{jobName}}/kuberenetesResources/full-deployment.yml"
+      dest: "/var/lib/jenkins/workspace/{{jobName}}/kuberenetesResources/full-deployment.yml"
+      force: yes
