@@ -9,5 +9,5 @@ make sure to put your own parameters in the file:
  * registryCredential
  
 ## use the api
-1. use a post call with post man\curl and pass img = path/to/image
+1. use a post call with postman\curl and pass img = path/to/image
 2. use client.py to pass the img.
