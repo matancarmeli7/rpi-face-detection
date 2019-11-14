@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "almoggolbar/image-process"
+    registry = "YOUR_REGISTRY"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'http://192.168.43.18/root/rpi-python.git'
+        git 'https://github.com/almoggo/rpi-face-detection.git'
       }
     }
     stage('Building image') {
