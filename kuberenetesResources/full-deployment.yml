@@ -27,7 +27,7 @@ spec:
       nodeSelector:
         kubernetes.io/hostname: raspberrypi
       containers:
-      - image: almoggolbar/image-process:{{buildId}}
+      - image: {{imageRegistry}}:{{buildId}}
         imagePullPolicy: IfNotPresent
         name: image-process
         resources: {}
