@@ -5,16 +5,19 @@ import cv2
 
 # Initialize the Flask application
 app = Flask(__name__)
-
+# take a picture get/post to the url
+# if a picture do  
 
 # route http posts to this method
 @app.route('/api/test', methods=['POST'])
 def test():
-    r = request
+    path = r'path/to/image.png'
+  #  r = request
     # convert string of image data to uint8
-    nparr = np.fromstring(r.data, np.uint8)
+   # nparr = np.fromstring(r.data, np.uint8)
     # decode image
-    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+   # img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    img = cv2.imread(path)
     # Load the cascade
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     # Convert into grayscale
