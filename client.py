@@ -3,7 +3,7 @@ import requests
 import json
 import cv2
 
-addr = 'http://hostname:5000'
+addr = 'http://localhost:5000'
 test_url = addr + '/api/test'
 
 # prepare headers for http request
