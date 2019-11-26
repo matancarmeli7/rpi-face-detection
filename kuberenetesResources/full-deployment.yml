@@ -24,8 +24,6 @@ spec:
       labels:
         app: image-process
     spec:
-      nodeSelector:
-        kubernetes.io/hostname: raspberrypi
       containers:
       - image: {{imageRegistry}}:{{buildId}}
         imagePullPolicy: IfNotPresent
